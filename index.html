@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My 3D Model</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>3D Models Index</title>
+  <!-- Prefetch 2 models per category -->
+  <link rel="prefetch" href="artwork/drill.glb">
+  <link rel="prefetch" href="artwork/3DModel_Custom.glb">
+  <link rel="prefetch" href="category2/model1.glb">
+  <link rel="prefetch" href="category2/model2.glb">
+  <!-- Add more for other categories -->
 </head>
 <body>
-  <model-viewer src="3DModel_Custom.glb" alt="A 3D model" auto-rotate camera-controls ar ios-src="model.usdz" loading="eager">
-    <button slot="footer" class="reset">Reset View</button>
-  </model-viewer>
+  <h1>Categories</h1>
+  <ul>
+    <li><a href="artwork.html">artwork</a></li>
+    <li><a href="category2.html">Category 2</a></li>
+    <!-- Add more links -->
+  </ul>
+  <script>
+    // Optional JS preload
+    function preload(url) {
+      fetch(url, { method: 'HEAD' });
+    }
+    preload('category1/model1.glb');
+    preload('category1/model2.glb');
+    preload('category2/model1.glb');
+    preload('category2/model2.glb');
+    // Add more
+  </script>
 </body>
 </html>
