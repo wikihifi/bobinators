@@ -5,8 +5,8 @@
   <!-- Prefetch 2 models per category -->
   <link rel="prefetch" href="artwork/drill.glb">
   <link rel="prefetch" href="artwork/3DModel_Custom.glb">
-  <link rel="prefetch" href="category2/model1.glb">
-  <link rel="prefetch" href="category2/model2.glb">
+  <link rel="prefetch" href="artifacts/pottery1.glb">
+  <link rel="prefetch" href="artifacts/pottery1.glb">
   <!-- Add more for other categories -->
 </head>
 <body>
@@ -21,10 +21,10 @@
     function preload(url) {
       fetch(url, { method: 'HEAD' });
     }
-    preload('category1/model1.glb');
-    preload('category1/model2.glb');
-    preload('category2/model1.glb');
-    preload('category2/model2.glb');
+    preload('artwork/drill.glb');
+    preload('artwork/3DModel_Custom.glb');
+    preload('artifacts/pottery1.glb');
+    preload('artifacts/pottery1.glb');
     // Add more
   </script>
 </body>
